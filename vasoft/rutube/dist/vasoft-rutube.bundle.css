@@ -1,0 +1,77 @@
+.vs-rutube-popup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.vs-rutube-close{
+    position:absolute;
+    top:30px;
+    right:30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border:1px solid transparent;
+    -webkit-transition:background-color 0.4s ease-out;
+    -o-transition:background-color 0.4s ease-out;
+    transition:background-color 0.4s ease-out;
+    cursor: pointer;
+}
+.vs-rutube-close:hover{
+    background-color: rgba(255,255,255,0.6)
+}
+.vs-rutube-close::after,
+.vs-rutube-close::before{
+    position:absolute;
+    top:18px;
+    right:9px;
+    background:#cecece;
+    width:20px;
+    height:2px;
+    content: '';
+    -webkit-transition:all 0.4s ease-out;
+    -o-transition:all 0.4s ease-out;
+    transition:all 0.4s ease-out;
+}
+.vs-rutube-close:hover::after,
+.vs-rutube-close:hover::before {
+    background:#d30533;
+}
+.vs-rutube-close:after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.vs-rutube-close:before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.vs-rutube-video {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.vs-rutube-hide {
+    display: none;
+}
