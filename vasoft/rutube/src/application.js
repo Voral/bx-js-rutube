@@ -1,5 +1,4 @@
 import './assets/styles.css';
-
 export class RutubeLinks {
     links = [];
     popup = null;
@@ -35,10 +34,11 @@ export class RutubeLinks {
     }
 
     clickHandler(event): void {
+        const target = event.target.closest('[data-rutube]');
         event.stopPropagation();
         event.preventDefault();
         this.renderPopup();
-        this.renderVideo(event.target.getAttribute('data-rutubeCode'));
+        this.renderVideo(target.getAttribute('data-rutubeCode'));
     }
 
     closeHandler(event): void {

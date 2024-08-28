@@ -49,10 +49,11 @@ this.BX = this.BX || {};
       }, {
         key: "clickHandler",
         value: function clickHandler(event) {
+          var target = event.target.closest('[data-rutube]');
           event.stopPropagation();
           event.preventDefault();
           this.renderPopup();
-          this.renderVideo(event.target.getAttribute('data-rutubeCode'));
+          this.renderVideo(target.getAttribute('data-rutubeCode'));
         }
       }, {
         key: "closeHandler",
